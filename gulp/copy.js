@@ -8,7 +8,7 @@ gulp.task('copy', function() {
   const dest = conf.dest;
   // image
   gulp.src('./app/src/images/**')
-    .pipe(gulp.dest(dest + '/images')
+    .pipe(gulp.dest(dest + '/assets/images')
   );
   // その他
   gulp.src('./app/src/other/**')
