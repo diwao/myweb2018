@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+@import './base/vars';
+@import './base/placeholder';
+@import './base/mq';
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: $textColor;
+  font-family: $fontFamilyJp;
+}

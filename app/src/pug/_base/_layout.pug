@@ -1,0 +1,18 @@
+doctype html
+block vars
+html(lang="ja")
+  head
+    meta(charset='UTF-8')
+    block title
+    block meta
+      meta(name="viewport", content=viewport)
+      meta(name='description', content=description)
+      meta(name='keywords', content=keywords)
+      include ./_meta_fb
+      include ./_meta_tw
+    block link
+      link(rel="apple-touch-icon", href=`${path}/assets/images/home_icon.png`)
+      link(rel="shortcut icon", href=`${path}/assets/images/favicon.ico`)
+  body
+    block body
+    block script

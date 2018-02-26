@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+// 変数
+$spMaxWidth: 568px;
+$tabMinWidth: $spMaxWidth + 1;
+$tabMaxWidth: 1320px;
+
+// sp
+@mixin mqSp($max: $spMaxWidth) {
+  @media only screen and (max-width: #{$max}) {
+    @content;
+  }
+}
+
+// pc
+@mixin mqPc($min: $spMaxWidth + 1px) {
+  @media only screen and (min-width: #{$min}) {
+    @content;
+  }
+}
+
+// tablet
+@mixin mqTab($min: $tabMinWidth, $max: $tabMaxWidth) {
+  @media only screen and (min-width: #{$min}) and (max-width: #{$max}) {
+    @content;
+  }
+}
+
+@mixin mq320($max: 320px) {
+  @media only screen and (max-width: #{$max}) {
+    @content;
+  }
+}

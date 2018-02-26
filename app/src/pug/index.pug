@@ -1,0 +1,14 @@
+extends ./_base/_layout
+block vars
+  - var path = '';
+block title
+  title= title
+block append meta
+block append link
+  link(rel="stylesheet", href=`${path}/assets/css/style.css`)
+block body
+  #wrapper.wrapper
+    header.header
+    main.main
+block append script
+  script(src=`${path}/assets/js/app.bundle.js`)
