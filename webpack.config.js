@@ -1,6 +1,5 @@
-const webpack = require('webpack');
-
 module.exports = {
+  mode: 'development',
   entry: {
     'app': ['./app/src/js/app.js']
   },
@@ -8,16 +7,21 @@ module.exports = {
     filename: '[name].bundle.js'
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader',
-        query:{
-          presets: ['es2015']
-        }
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: [
+                ['env', {'modules': false}]
+              ]
+            }
+          }
+        ],
+        exclude: /node_modules/
       }
     ]
-  },
-  devtool: 'source-map'
+  }
 }

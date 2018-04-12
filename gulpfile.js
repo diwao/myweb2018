@@ -19,6 +19,8 @@ gulp.task('default', function(){
   });
   gulp.watch('./app/src/scss/**/*.scss', ['sass']);
   gulp.watch('./app/src/pug/**/*.pug', ['pug']);
+  gulp.watch('./app/src/js/**/*.js', ['babel']);
+  gulp.watch('./app/src/images/**', ['copy']);
 });
 
 // ビルド
