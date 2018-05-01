@@ -18,10 +18,10 @@
   },
   "homepage": "https://github.com/diwao/myweb2018#readme",
   "devDependencies": {
-    "babel-core": "^6.26.0",
+    "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
-    "browser-sync": "^2.23.6",
+    "browser-sync": "^2.24.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.1.0",
     "gulp-notify": "^3.2.0",
@@ -29,7 +29,7 @@
     "gulp-pug": "^3.3.0",
     "gulp-sass": "^3.1.0",
     "jquery": "^3.3.1",
-    "webpack": "^4.5.0",
+    "webpack": "^4.6.0",
     "webpack-stream": "^4.0.3"
   },
   "private": true
