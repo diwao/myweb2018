@@ -1,26 +1,30 @@
 'use strict';
 
-// モジュール読み込み
+// common modules
 const gulp = require('gulp');
 const browserSync = require('browser-sync');
+const conf = require('./config');
 
-// タスク読み込み
+// tasks
 const sass = require('./gulp/sass');
 const pug = require('./gulp/pug');
-const copy = require('./gulp/copy');
+// const copy = require('./gulp/copy');
 const babel = require('./gulp/babel');
+const imagemin = require('./gulp/image');
 
-// デフォルトタスク
+// default
 gulp.task('default', () => {
-  browserSync.init({ server: './app/dist/' });
-  gulp.watch('./app/src/scss/**/*.scss', gulp.series('sass'));
-  gulp.watch('./app/src/pug/**/*.pug', gulp.series('pug'));
-  gulp.watch('./app/src/js/**/*.js', gulp.series('babel'));
-  gulp.watch('./app/src/images/**', gulp.series('copy'));
+  const src = conf.src;
+  const dist = conf.dest;
+  browserSync.init({ server: `${dist}/` });
+  gulp.watch(`${src}${conf.sass.src}`, gulp.series('sass'));
+  gulp.watch(`${src}${conf.pug.src}`, gulp.series('pug'));
+  gulp.watch(`${src}${conf.babel.src}`, gulp.series('babel'));
+  gulp.watch(`${src}${conf.imagemin.src}`, gulp.series('imagemin'));
 });
 
-// ビルド
+// build
 gulp.task('build', (done)=>{
-  gulp.series('sass', 'pug', 'copy', 'babel');
+  gulp.series('sass', 'pug', 'babel', 'imagemin');
   return done();
 });
