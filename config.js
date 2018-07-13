@@ -1,7 +1,7 @@
 module.exports = {
-  // 開発ディレクトリ
+  // for developement
   src: './app/src',
-  // 納品物ディレクトリ
+  // for production
   dest: './app/dist',
   // pug
   pug: {
@@ -12,16 +12,7 @@ module.exports = {
   // sass
   sass: {
     src: '/scss/**/*.scss',
-    dest: '/assets/css/',
-    options: {
-      outputStyle: 'compressed',
-      sourceMap: true,
-      sourceComment: false
-    }
-  },
-  // autoprefixer
-  autoprefixerOptions: {
-    browsers: ['last 3 version', 'ie >= 9', 'Android 4.0']
+    dest: '/assets/css/'
   },
   //babel
   babel: {

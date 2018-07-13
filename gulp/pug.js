@@ -1,15 +1,17 @@
 'use strict';
 
-// モジュール読み込み
+// common modules
 const gulp = require('gulp');
 const fs = require('fs');
 const notify = require('gulp-notify');
 const plumber = require('gulp-plumber');
-const pug = require('gulp-pug');
 const browserSync = require('browser-sync');
 const conf = require('../config');
 
-// タスク
+// pug modules
+const pug = require('gulp-pug');
+
+// task
 gulp.task('pug', () => {
   const src = [conf.src + conf.pug.src, '!' + conf.src + conf.pug.exclude];
   const dest = conf.dest + conf.pug.dest;
@@ -21,10 +23,5 @@ gulp.task('pug', () => {
     }))
     .pipe(pug(pugOptions))
     .pipe(gulp.dest(dest))
-    .pipe(browserSync.stream())
-    .pipe(notify({
-      title: 'pugをコンパイルしました！',
-      message: new Date(),
-      sound: 'Glass'
-    }));
+    .pipe(browserSync.stream());
 });
