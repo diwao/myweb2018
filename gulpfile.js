@@ -11,17 +11,16 @@ const copy = require('./gulp/copy');
 const babel = require('./gulp/babel');
 
 // デフォルトタスク
-gulp.task('default', function(){
-  browserSync.init({
-    server: {
-      baseDir: 'app/dist/'
-    }
-  });
-  gulp.watch('./app/src/scss/**/*.scss', ['sass']);
-  gulp.watch('./app/src/pug/**/*.pug', ['pug']);
-  gulp.watch('./app/src/js/**/*.js', ['babel']);
-  gulp.watch('./app/src/images/**', ['copy']);
+gulp.task('default', () => {
+  browserSync.init({ server: './app/dist/' });
+  gulp.watch('./app/src/scss/**/*.scss', gulp.series('sass'));
+  gulp.watch('./app/src/pug/**/*.pug', gulp.series('pug'));
+  gulp.watch('./app/src/js/**/*.js', gulp.series('babel'));
+  gulp.watch('./app/src/images/**', gulp.series('copy'));
 });
 
 // ビルド
-gulp.task('build', ['sass', 'pug', 'copy', 'babel']);
+gulp.task('build', (done)=>{
+  gulp.series('sass', 'pug', 'copy', 'babel');
+  return done();
+});

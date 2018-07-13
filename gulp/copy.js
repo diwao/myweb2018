@@ -4,7 +4,7 @@
 const gulp = require('gulp');
 const conf = require('../config');
 
-gulp.task('copy', function() {
+gulp.task('copy', (done) => {
   const dest = conf.dest;
   // image
   gulp.src('./app/src/images/**')
@@ -14,4 +14,5 @@ gulp.task('copy', function() {
   gulp.src('./app/src/other/**')
     .pipe(gulp.dest(dest + '/')
   );
+  done();
 });
