@@ -8,7 +8,7 @@ const conf = require('./config');
 // tasks
 const sass = require('./gulp/sass');
 const pug = require('./gulp/pug');
-// const copy = require('./gulp/copy');
+const copy = require('./gulp/copy');
 const babel = require('./gulp/babel');
 const imagemin = require('./gulp/image');
 
@@ -24,7 +24,4 @@ gulp.task('default', () => {
 });
 
 // build
-gulp.task('build', (done)=>{
-  gulp.series('sass', 'pug', 'babel', 'imagemin');
-  return done();
-});
+gulp.task('build', gulp.parallel('sass', 'pug', 'babel', 'imagemin', 'copy'));

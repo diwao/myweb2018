@@ -1,0 +1,16 @@
+@charset 'uth-8';
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: $textColor;
+  font-family: $fontFamilyJp;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

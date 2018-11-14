@@ -1,14 +1,12 @@
 @charset "UTF-8";
 
-@import './base/vars';
-@import './base/placeholder';
-@import './base/mq';
+@import './settings/variables';
+@import './settings/mixins/media-query';
+@import './settings/mixins/clearfix';
+@import './settings/functions/vw';
+@import './settings/functions/rem';
 
-html {
-  font-size: 62.5%;
-}
+@import './libs/reset';
+@import './libs/normalize';
 
-body {
-  color: $textColor;
-  font-family: $fontFamilyJp;
-}
+@import './settings/base';
