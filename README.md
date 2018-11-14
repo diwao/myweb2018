@@ -12,8 +12,8 @@
 
 ```
 $ npm install
-$ npm run gulp build
-$ npm run gulp
+$ npx gulp build
+$ npx gulp
 ```
 
 ここまでやるとローカルにサーバが起動します。
@@ -23,5 +23,5 @@ src内のファイルをいじってサイトを作っていきましょう。
 
 |    | version  |
 | ---- | ---- |
-|  node.js  |  8.11.1  |
-|  gulp  | 3.9.1  |
+|  node.js  | v8.12.0  |
+|  npm  | v6.4.1  |
