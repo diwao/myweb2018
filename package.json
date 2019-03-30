@@ -25,8 +25,8 @@
   },
   "homepage": "https://github.com/diwao/myweb2018#readme",
   "devDependencies": {
-    "@babel/core": "^7.0.0-beta.53",
-    "@babel/preset-env": "^7.0.0-beta.53",
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
     "autoprefixer": "^8.6.5",
     "babel-loader": "^8.0.0-beta.4",
     "browser-sync": "^2.26.3",
