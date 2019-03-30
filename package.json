@@ -1,10 +1,14 @@
 {
   "name": "myweb2018",
   "version": "1.2.0",
+  "directories": {
+    "test": "test"
+  },
   "description": "this is the template for frontend development.",
   "main": "gulpfile.js",
   "scripts": {
-    "gulp": "gulp"
+    "gulp": "gulp",
+    "test": "mocha --require intelli-espower-loader"
   },
   "repository": {
     "type": "git",
@@ -21,34 +25,31 @@
   },
   "homepage": "https://github.com/diwao/myweb2018#readme",
   "devDependencies": {
-    "@babel/core": "^7.0.0-beta.53",
-    "@babel/preset-env": "^7.0.0-beta.53",
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
     "autoprefixer": "^8.6.5",
     "babel-loader": "^8.0.0-beta.4",
     "browser-sync": "^2.26.3",
     "csswring": "^6.0.3",
     "gulp": "^4.0.0",
-    "gulp-imagemin": "^5.0.3",
+    "gulp-imagemin": "^4.1.0",
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.0",
     "gulp-postcss": "^7.0.1",
     "gulp-pug": "^3.3.0",
     "gulp-sass": "^4.0.1",
     "hoek": "^5.0.3",
-    "imagemin-mozjpeg": "^8.0.0",
-    "imagemin-pngquant": "^6.0.0",
+    "imagemin-mozjpeg": "^7.0.0",
+    "imagemin-pngquant": "^5.1.0",
+    "intelli-espower-loader": "^1.0.1",
     "mocha": "^5.2.0",
     "postcss-flexbugs-fixes": "^3.3.1",
+    "power-assert": "^1.6.1",
     "webpack": "^4.16.0",
     "webpack-stream": "^4.0.3"
   },
   "private": true,
   "dependencies": {
-    "gsap": "^2.0.2",
-    "howler": "^2.0.15",
-    "imagesloaded": "^4.1.4",
-    "jquery": "^3.3.1",
-    "slick-carousel": "^1.8.1",
-    "vue": "^2.5.17"
+    "jquery": "^3.3.1"
   }
 }
