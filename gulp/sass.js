@@ -14,16 +14,22 @@ const autoprefixer = require('autoprefixer');
 const flexBugsFixes = require('postcss-flexbugs-fixes');
 const cssWring = require('csswring');
 
+// env
+const mode = process.env.NODE_ENV;
+
 // options
 const autoprefixerOption = {
   grid : true
 };
 
-const postcssOption = [
+let postcssOption = [
   flexBugsFixes,
-  autoprefixer(autoprefixerOption),
-  cssWring
+  autoprefixer(autoprefixerOption)
 ];
+
+if (mode === 'production') {
+  postcssOption.push(cssWring);
+}
 
 // task
 gulp.task('sass', function(){

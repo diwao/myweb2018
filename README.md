@@ -12,12 +12,27 @@
 
 ```
 $ npm install
-$ npx gulp build
-$ npx gulp
+$ npm run build
+$ npm run start
 ```
 
 ここまでやるとローカルにサーバが起動します。
 src内のファイルをいじってサイトを作っていきましょう。
+
+```
+$ npm run release
+```
+
+でリリース用のファイルを生成します。
+
+### static
+
+`src`直下の`static`ディレクトリに配置したファイルはそのままdistに出力されます。
+
+## テスト
+
+mochaが使えます。テストファイルはの置き場所はroot直下の`test`ディレクトリです。
+
 
 ## 推奨環境
 

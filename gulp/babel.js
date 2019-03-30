@@ -11,7 +11,11 @@ const webpack = require('webpack');
 
 // task
 gulp.task('babel', () => {
+  const mode = process.env.NODE_ENV;
   const webpackConfig = require('../webpack.config');
+  if (mode === 'production') {
+    webpackConfig.mode = mode;
+  }
   const conf = require('../config');
   const dest = conf.dest + conf.babel.dest;
   return webpackStream(webpackConfig, webpack)
