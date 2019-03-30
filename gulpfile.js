@@ -25,3 +25,6 @@ gulp.task('default', () => {
 
 // build
 gulp.task('build', gulp.parallel('sass', 'pug', 'babel', 'imagemin', 'copy'));
+
+// release
+gulp.task('release', gulp.parallel('sass', 'pug', 'babel', 'imagemin', 'copy'));

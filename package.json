@@ -8,6 +8,9 @@
   "main": "gulpfile.js",
   "scripts": {
     "gulp": "gulp",
+    "start": "NODE_ENV=development gulp",
+    "build": "NODE_ENV=development gulp build",
+    "release": "NODE_ENV=production gulp release",
     "test": "mocha --require intelli-espower-loader"
   },
   "repository": {
