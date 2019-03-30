@@ -12,7 +12,6 @@ const webpack = require('webpack');
 // task
 gulp.task('babel', () => {
   const mode = process.env.NODE_ENV;
-  console.log(`環境変数：${mode}`);
   const webpackConfig = require('../webpack.config');
   if (mode === 'production') {
     webpackConfig.mode = mode;

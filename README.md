@@ -12,12 +12,18 @@
 
 ```
 $ npm install
-$ npx gulp build
-$ npx gulp
+$ npm run build
+$ npm run start
 ```
 
 ここまでやるとローカルにサーバが起動します。
 src内のファイルをいじってサイトを作っていきましょう。
+
+```
+$ npm run release
+```
+
+でリリース用のファイルを生成します。
 
 ## 推奨環境
 

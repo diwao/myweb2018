@@ -11,6 +11,7 @@ const pug = require('./gulp/pug');
 const copy = require('./gulp/copy');
 const babel = require('./gulp/babel');
 const imagemin = require('./gulp/image');
+const clean = require('./gulp/clean');
 
 // default
 gulp.task('default', () => {
@@ -27,4 +28,4 @@ gulp.task('default', () => {
 gulp.task('build', gulp.parallel('sass', 'pug', 'babel', 'imagemin', 'copy'));
 
 // release
-gulp.task('release', gulp.parallel('sass', 'pug', 'babel', 'imagemin', 'copy'));
+gulp.task('release', gulp.series('clean', 'sass', 'pug', 'babel', 'imagemin', 'copy'));
