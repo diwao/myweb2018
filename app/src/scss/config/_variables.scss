@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+// カラー
+$colorKey: crimson;
+$colorText: #666;
+$colorLink: blue;
+
+// フォント
+$fontFamilyJp: 'HiraKakuPro', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'YuGothic', '游ゴシック', Roboto, Osaka, sans-serif;
+$fontFamilyEn: "Avenir Next", Helvetica, Arial, sans-serif;
+
+// サイズ
+$spDesignWidth: 750;
+
+$spMaxWidth: 568px;
+$tabMinWidth: $spMaxWidth + 1;
+$tabMaxWidth: 1024px;

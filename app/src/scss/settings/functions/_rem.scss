@@ -1,6 +1,0 @@
-@charset "utf-8";
-
-// font-size: rem(10);
-@function rem( $px, $base: 10 ) {
-  @return ( $px / $base ) + rem;
-}
