@@ -18,7 +18,7 @@ class FixBody {
 
   release() {
     const body = document.querySelector('body')
-    body.setAttribute('style', ``)
+    body.setAttribute('style', '')
 
     console.log(window)
     console.log(this.scrollTop)
