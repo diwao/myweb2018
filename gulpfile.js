@@ -11,6 +11,7 @@ const pug = require('./gulp/pug');
 const copy = require('./gulp/copy');
 const babel = require('./gulp/babel');
 const imagemin = require('./gulp/image');
+const htmlhint = require('./gulp/htmlhint');
 const clean = require('./gulp/clean');
 
 // default
@@ -24,8 +25,11 @@ gulp.task('default', () => {
   gulp.watch(`${src}${conf.imagemin.src}`, gulp.series('imagemin'));
 });
 
+// check
+gulp.task('validate', gulp.series('htmlhint'));
+
 // build
 gulp.task('build', gulp.parallel('sass', 'pug', 'babel', 'imagemin', 'copy'));
 
 // release
-gulp.task('release', gulp.series('clean', 'sass', 'pug', 'babel', 'imagemin', 'copy'));
+gulp.task('release', gulp.series('clean', 'sass', 'pug', 'babel', 'imagemin', 'copy', 'htmlhint'));

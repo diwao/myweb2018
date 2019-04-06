@@ -11,6 +11,7 @@
     "start": "NODE_ENV=development gulp",
     "build": "NODE_ENV=development gulp build",
     "release": "NODE_ENV=production gulp release",
+    "validate": "gulp validate",
     "test": "mocha --require intelli-espower-loader"
   },
   "repository": {
@@ -37,6 +38,7 @@
     "csswring": "^6.0.3",
     "del": "^4.0.0",
     "gulp": "^4.0.0",
+    "gulp-htmlhint": "^2.2.1",
     "gulp-imagemin": "^5.0.3",
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.1",

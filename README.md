@@ -29,6 +29,14 @@ $ npm run release
 
 `src`直下の`static`ディレクトリに配置したファイルはそのままdistに出力されます。
 
+### コードチェック
+
+```
+$ npm run validate
+```
+
+で`/app/dist/`内のコードをチェックできます。
+
 ## テスト
 
 mochaが使えます。テストファイルはの置き場所はroot直下の`test`ディレクトリです。
