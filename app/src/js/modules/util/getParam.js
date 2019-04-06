@@ -1,3 +1,4 @@
+'use strict';
 export default (name) => {
   const url = location.href;
   let params;

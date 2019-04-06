@@ -1,4 +1,5 @@
-class Ua {
+'use strict';
+export default class Ua {
   constructor() {
     this.ua = window.navigator.userAgent.toLowerCase();
   }
@@ -32,5 +33,3 @@ class Ua {
     return this.ua.indexOf('android') >= 0;
   }
 }
-
-export default Ua;
