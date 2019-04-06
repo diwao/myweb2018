@@ -1,0 +1,31 @@
+{
+  "globals": {
+    "$": true,
+    "FB": true,
+    "TweenMax": true,
+    "TimelineMax": true,
+    "ga": true,
+    "jQuery": true
+  },
+  "extends": "eslint:recommended",
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "mocha": true,
+    "jquery": true
+  },
+  "rules": {
+    "no-console": 0,
+    "no-alert": 1,
+    "quotes": [1, "single"],
+    "consistent-return": 1,
+    "default-case": 2,
+    "eqeqeq": 2,
+    "camelcase": [1, {"properties": "always"}],
+    "no-unused-vars": 1
+  },
+  "parserOptions": {
+    "sourceType": "module"
+  }
+}
