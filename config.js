@@ -23,5 +23,9 @@ module.exports = {
   imagemin: {
     src: '/images/**/*',
     dest: '/assets/images/'
+  },
+  // htmlhint
+  htmlhint: {
+    src: ['/**/*.html']
   }
 };

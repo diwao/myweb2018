@@ -11,6 +11,7 @@ const pug = require('./gulp/pug');
 const copy = require('./gulp/copy');
 const babel = require('./gulp/babel');
 const imagemin = require('./gulp/image');
+const htmlhint = require('./gulp/htmlhint');
 const clean = require('./gulp/clean');
 
 // default
