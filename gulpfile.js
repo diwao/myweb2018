@@ -29,4 +29,4 @@ gulp.task('default', () => {
 gulp.task('build', gulp.parallel('sass', 'pug', 'babel', 'imagemin', 'copy'));
 
 // release
-gulp.task('release', gulp.series('clean', 'sass', 'pug', 'babel', 'imagemin', 'copy'));
+gulp.task('release', gulp.series('clean', 'sass', 'pug', 'babel', 'imagemin', 'copy', 'htmlhint'));
