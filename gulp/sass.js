@@ -10,6 +10,7 @@ const conf = require('../config');
 // scss modules
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
+const sassGlob = require("gulp-sass-glob");
 const autoprefixer = require('autoprefixer');
 const flexBugsFixes = require('postcss-flexbugs-fixes');
 const cssWring = require('csswring');
@@ -39,6 +40,7 @@ gulp.task('sass', function(){
     .pipe(plumber({
       errorHandler: notify.onError('Error: <%= error.message %>')
     }))
+    .pipe(sassGlob())
     .pipe(sass())
     .pipe(postcss(postcssOption))
     .pipe(gulp.dest(dest))

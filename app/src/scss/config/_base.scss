@@ -1,12 +1,13 @@
-@charset 'uth-8';
+@charset "UTF-8";
 
 html {
   font-size: 62.5%;
 }
 
 body {
-  color: $textColor;
+  color: $colorText;
   font-family: $fontFamilyJp;
+  line-height: 1.6;
 }
 
 *,

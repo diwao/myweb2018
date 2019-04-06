@@ -1,12 +1,20 @@
 @charset "UTF-8";
 
-@import './settings/variables';
-@import './settings/mixins/media-query';
-@import './settings/mixins/clearfix';
-@import './settings/functions/vw';
-@import './settings/functions/rem';
-
+@import './config/variables';
+@import './util/animation/**/*.scss';
+@import './util/functions/**/*.scss';
+@import './util/mixins/clearfix';
+@import './util/mixins/media-query';
 @import './libs/reset';
 @import './libs/normalize';
+@import './config/base';
 
-@import './settings/base';
+body {
+  background-color: $colorLink;
+}
+
+h1 {
+  @include sp {
+    color: #fff;
+  }
+}
