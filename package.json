@@ -11,6 +11,7 @@
     "start": "NODE_ENV=development gulp",
     "build": "NODE_ENV=development gulp build",
     "release": "NODE_ENV=production gulp release",
+    "validate": "gulp validate",
     "test": "mocha --require intelli-espower-loader"
   },
   "repository": {

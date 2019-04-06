@@ -25,6 +25,9 @@ gulp.task('default', () => {
   gulp.watch(`${src}${conf.imagemin.src}`, gulp.series('imagemin'));
 });
 
+// check
+gulp.task('validate', gulp.series('htmlhint'));
+
 // build
 gulp.task('build', gulp.parallel('sass', 'pug', 'babel', 'imagemin', 'copy'));
 
