@@ -1,10 +1,6 @@
-// export class Hello {
-//   constructor() {
-//     console.log('hello! from class');
-//   }
-// }
+'use strict';
 
-class Hello {
+export class Hello {
   constructor() {
     console.log('hello! from class');
   }
@@ -12,5 +8,3 @@ class Hello {
     return `${name}です`;
   }
 }
-
-module.exports = Hello;

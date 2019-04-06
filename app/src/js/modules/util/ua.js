@@ -1,3 +1,4 @@
+'use strict';
 class Ua {
   constructor() {
     this.ua = window.navigator.userAgent.toLowerCase();

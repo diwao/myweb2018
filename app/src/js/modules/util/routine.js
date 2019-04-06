@@ -1,3 +1,4 @@
+'use strict';
 class Routine {
   constructor() {
     this.func = null;

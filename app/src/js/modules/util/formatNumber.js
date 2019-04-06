@@ -1,3 +1,4 @@
+'use strict';
 export default (value) => {
   if (typeof value !== 'number') {
     return false;
