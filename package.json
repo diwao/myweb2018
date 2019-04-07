@@ -32,7 +32,6 @@
     "@babel/core": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
     "autoprefixer": "^8.6.5",
-    "axios": "^0.18.0",
     "babel-loader": "^8.0.5",
     "browser-sync": "^2.26.3",
     "csswring": "^6.0.3",
@@ -59,6 +58,12 @@
   },
   "private": true,
   "dependencies": {
-    "jquery": "^3.3.1"
+    "axios": "^0.18.0",
+    "gsap": "^2.1.2",
+    "howler": "^2.1.1",
+    "imagesloaded": "^4.1.4",
+    "jquery": "^3.3.1",
+    "slick-carousel": "^1.8.1",
+    "vue": "^2.6.10"
   }
 }
