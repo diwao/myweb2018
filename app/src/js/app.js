@@ -1,6 +1,6 @@
 'use strict';
 
-import {Hello} from './modules/sub';
+const Hello = require('./modules/sub');
 import initThrottle from './modules/util/initThrottle';
 // import { TimelineMax, Power0, TweenMax, Back, Elastic, Bounce, Linear, Power3 } from 'gsap/all';
 // import { Howl, Howler } from 'howler';

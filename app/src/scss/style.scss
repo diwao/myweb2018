@@ -1,19 +1,24 @@
 @charset "UTF-8";
 
+// variables
 @import './config/variables';
-@import './util/animation/**/*.scss';
-@import './util/functions/**/*.scss';
+// animation
+@import './util/animation/rotate';
+// function
+@import './util/functions/half';
+@import './util/functions/rem';
+@import './util/functions/vw';
+// mixin
 @import './util/mixins/clearfix';
 @import './util/mixins/media-query';
+// lib
 @import './libs/reset';
 @import './libs/normalize';
+// base
 @import './config/base';
 
-body {
-  background-color: $colorLink;
-}
-
 h1 {
+  font-size: rem(50);
   @include sp {
     color: #fff;
   }
