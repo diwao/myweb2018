@@ -14,7 +14,7 @@ const imageminMozjpeg = require('imagemin-mozjpeg');
 
 // option
 const imageminOption = [
-  imageminPngquant({ quality: '65-80' }),
+  imageminPngquant({ quality: [0.5, 0.8] }),
   imageminMozjpeg({quality: 80 }),
   imagemin.gifsicle(),
   imagemin.jpegtran(),
