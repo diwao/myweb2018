@@ -7,6 +7,7 @@ import initThrottle from './modules/util/initThrottle';
 // import imagesLoaded from 'imagesloaded';
 // import $ from 'jquery';
 // import 'slick-carousel';
+import Vue from 'vue';
 
 window.addEventListener('load', () => {
   const hello = new Hello();
@@ -17,5 +18,17 @@ window.addEventListener('load', () => {
     resizeThrottle(function(){
       console.log('resize');
     });
+  });
+
+  new Vue({
+    el: '#app',
+    data: {
+      count: 10
+    },
+    methods: {
+      countUp() {
+        this.count++;
+      }
+    }
   });
 });

@@ -11,5 +11,8 @@ block body
     header.header
       h1 Hello, World!
     main.main
+      #app
+        p {{ count }}
+        button(@click="countUp") クリック
 block append script
   script(src=`${path}/assets/js/app.bundle.js?v=${Date.now()}`)
