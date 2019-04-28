@@ -23,3 +23,24 @@ h1 {
     color: #fff;
   }
 }
+
+// scrollMagic sample
+.scroll-magic-box {
+  .box {
+    background: slateblue;
+    height: 1000px;
+    margin-top: 50px;
+    width: 600px;
+
+    &.box-third {
+      opacity: 0;
+      transition: 1s all;
+      transform: translateX(-100%);
+
+      &.js-active {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  }
+}
