@@ -11,8 +11,15 @@ block body
     header.header
       h1 Hello, World!
     main.main
+      //- Vue Sample
       #app
         p {{ count }}
         button(@click="countUp") クリック
+      //- scrollMagic Sample
+      .scroll-magic-box
+        .box.box-first
+        #secondBox.box.box-second
+        #thirdBox.box.box-third
+        .box.box-fourth
 block append script
   script(src=`${path}/assets/js/app.bundle.js?v=${Date.now()}`)
