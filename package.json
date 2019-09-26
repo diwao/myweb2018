@@ -33,7 +33,7 @@
     "@babel/preset-env": "^7.4.3",
     "autoprefixer": "^8.6.5",
     "babel-loader": "^8.0.5",
-    "browser-sync": "^2.26.5",
+    "browser-sync": "^2.26.7",
     "csswring": "^6.0.3",
     "del": "^4.1.0",
     "gulp": "^4.0.0",
@@ -59,7 +59,7 @@
   },
   "private": true,
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "gsap": "^2.1.2",
     "howler": "^2.1.1",
     "imagesloaded": "^4.1.4",
