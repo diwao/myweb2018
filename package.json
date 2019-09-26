@@ -54,6 +54,8 @@
     "mocha": "^5.2.0",
     "postcss-flexbugs-fixes": "^3.3.1",
     "power-assert": "^1.6.1",
+    "ts-loader": "^6.1.2",
+    "typescript": "^3.6.3",
     "webpack": "^4.29.6",
     "webpack-stream": "^4.0.3"
   },
