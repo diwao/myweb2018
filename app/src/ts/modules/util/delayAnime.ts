@@ -1,4 +1,4 @@
-import $ from 'jquery';
+'use strict';
 
 export default ($elm, duration = 100) => {
   return $elm.find('.js-delay-anime').each(function(i){

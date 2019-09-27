@@ -1,4 +1,4 @@
-import $ from 'jquery';
+'use strict';
 
 // st: scrollTop
 export default (st, elm) => {

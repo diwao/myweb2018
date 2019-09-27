@@ -1,4 +1,4 @@
-import $ from 'jquery';
+'use strict';
 
 export default (to, callback) => {
   // ユーザーのスクロール操作禁止

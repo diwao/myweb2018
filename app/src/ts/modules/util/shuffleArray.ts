@@ -1,4 +1,5 @@
 'use strict';
+
 export default (array) => {
   let n = array.length;
   let t;

@@ -1,4 +1,6 @@
 'use strict';
+
+// ユーザーエージェントを判定するオブジェクトを生成する
 export default class Ua {
   private ua: String;
 
@@ -6,31 +8,31 @@ export default class Ua {
     this.ua = window.navigator.userAgent.toLowerCase();
   }
 
-  isIE() {
+  isIE(): boolean {
     return this.ua.indexOf('msie') >= 0 || this.ua.indexOf('trident') >= 0;
   }
 
-  isFF() {
+  isFF(): boolean {
     return this.ua.indexOf('firefox') >= 0;
   }
 
-  isChrome() {
+  isChrome(): boolean {
     return this.ua.indexOf('chrome') >= 0;
   }
 
-  isSafari() {
+  isSafari(): boolean {
     return this.ua.indexOf('safari') >= 0 && !(this.ua.indexOf('chrome') >= 0);
   }
 
-  isEdge() {
+  isEdge(): boolean {
     return this.ua.indexOf('edge') >= 0;
   }
 
-  isIOS() {
+  isIOS(): boolean {
     return this.ua.indexOf('ipad') >= 0 || this.ua.indexOf('iphone') >= 0;
   }
 
-  isAndroid() {
+  isAndroid(): boolean {
     return this.ua.indexOf('android') >= 0;
   }
 }
