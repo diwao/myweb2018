@@ -1,21 +1,25 @@
-import scroll from './scroll.js';
+import scroll from './scroll';
 
-export default (className: string, _margin = 0, func) => {
-  $(className).on('click', function(e) {
+import * as $ from 'jquery';
+
+export default (selector: string, _margin = 0, callback) => {
+  // console.log($);
+  $(selector).on('click', function(e) {
     e.preventDefault();
-    const hash = $(this).attr('href');
-    let target = 'html';
+    const hash: string = $(this).attr('href');
+    let target: string = 'html';
     if (hash.match(/^#.+/)) {
       target = hash;
     }
 
-    const margin = _margin;
-    const to = $(target).offset().top - margin;
-    scroll(to, {});
+    const margin: number = _margin;
+    const to: number = $(target).offset().top - margin;
 
     // コールバック
-    if (typeof func === 'function') {
-      func();
+    if (typeof callback === 'function') {
+      scroll(to, callback);
+    } else {
+      scroll(to, {});
     }
   });
 };
