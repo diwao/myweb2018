@@ -1,33 +1,35 @@
 'use strict';
 
-// スプライトアニメーションを実装する
+// スプライトアニメーションを実装する（横方向）
 export default class SpriteAnime {
   private elm: HTMLElement;
   private duration: number;
   private frameCount: number;
   private frameSize: number;
-  private timer: any;
+  private timer: number;
 
-  constructor(elm: HTMLElement, duration = 10) {
-    this.elm = elm;
+  constructor(el: string, duration = 10) {
+    this.elm = document.querySelector(el);
     this.duration = duration;
-    this.frameCount = this.getFrameCount(this.elm);
+    this.frameCount = this.getFrameCount();
     this.frameSize = this.setFrameSize();
     this.timer = null;
   }
 
   // アニメーションのフレーム数を取得
-  getFrameCount(elm: HTMLElement): number {
-    let frameCount = parseInt(elm.getAttribute('data-frameCount'));
+  getFrameCount(): number {
+    // data-frameCount属性に設定した値を取得（アニメーション数を示す数字）
+    let frameCount: number = parseInt(this.elm.getAttribute('data-frameCount'));
     if (isNaN(frameCount)) {
       frameCount = 0;
     }
     return frameCount;
   }
 
-  getFrameSize() {
+  // スプライト画像1コマのサイズを取得
+  getFrameSize(): number {
     const elm = this.elm;
-    let frameSize = Number(elm.clientHeight);
+    let frameSize = Number(elm.clientWidth);
     if (isNaN(frameSize)) {
       frameSize = null;
     }
@@ -38,11 +40,10 @@ export default class SpriteAnime {
     return (this.frameSize = this.getFrameSize());
   }
 
-  animateOneFrame(count: number) {
+  animateOneFrame(count: number): void {
     const elm = this.elm;
     const frameSize = this.frameSize;
-    elm.style.backgroundPositionY = `-${frameSize * count}px`;
-    return elm;
+    elm.style.backgroundPositionX = `-${frameSize * count}px`;
   }
 
   animateAllFrame(): void {
@@ -56,6 +57,7 @@ export default class SpriteAnime {
         this.animateOneFrame(count);
         count++;
         if (count >= this.frameCount) {
+          this.timer = null;
           return;
         }
         repeat();
@@ -65,7 +67,10 @@ export default class SpriteAnime {
   }
 
   start(): void {
-    this.animateAllFrame();
+    console.log(this.timer);
+    if (this.timer === null) {
+      this.animateAllFrame();
+    }
   }
 
   stop(): void {

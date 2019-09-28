@@ -21,5 +21,8 @@ block body
         #secondBox.box.box-second
         #thirdBox.box.box-third
         .box.box-fourth
+      #sprite.sprite(data-frameCount="8")
+      button#spriteStart アニメーション開始
+      button#spriteStop アニメーション停止
 block append script
   script(src=`${path}/assets/js/app.bundle.js?v=${Date.now()}`)

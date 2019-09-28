@@ -44,3 +44,11 @@ h1 {
     }
   }
 }
+
+.sprite {
+  background: url(../images/sprite.png) no-repeat 0 0;
+  height: 64px;
+  overflow: hidden;
+  vertical-align: bottom;
+  width: 64px;
+}

@@ -1,10 +1,7 @@
 'use strict';
 
 // Libs
-import {
-  TweenMax,
-  Bounce
-} from 'gsap';
+import { TweenMax, Bounce } from 'gsap';
 // import { Howl, Howler } from 'howler';
 // import imagesLoaded from 'imagesloaded';
 // import 'slick-carousel';
@@ -14,6 +11,8 @@ import Vue from 'vue';
 import Hello from './modules/sub';
 import initThrottle from './modules/util/initThrottle';
 import scrollMagicSample from './modules/scrollMagicSample';
+
+import Sprite from './modules/util/SpriteAnime';
 
 // DOM解析後に発火
 window.addEventListener('DOMContentLoaded', () => {
@@ -55,4 +54,15 @@ window.addEventListener('load', () => {
   });
 
   scrollMagicSample();
+
+  // スプライトアニメーションのサンプル
+  const sprite = new Sprite('#sprite', 200);
+  const spriteStart: HTMLElement = document.getElementById('spriteStart');
+  const spriteStop: HTMLElement = document.getElementById('spriteStop');
+  spriteStart.addEventListener('click', () => {
+    sprite.start();
+  });
+  spriteStop.addEventListener('click', () => {
+    sprite.stop();
+  });
 });
