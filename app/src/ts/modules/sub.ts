@@ -4,7 +4,7 @@ class Hello {
   constructor() {
     console.log('hello! from class');
   }
-  say(name) {
+  say(name: string): string {
     return `${name}です`;
   }
 }

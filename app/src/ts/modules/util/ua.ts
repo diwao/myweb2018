@@ -1,7 +1,7 @@
 'use strict';
 
 // ユーザーエージェントを判定するオブジェクトを生成する
-export default class Ua {
+export default class UA {
   private ua: String;
 
   constructor() {
