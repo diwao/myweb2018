@@ -19,6 +19,7 @@ block body
       .scroll-magic-box
         #firstBox.box.box-first
         #secondBox.box.box-second
+        button#modalOpen modal
         #thirdBox.box.box-third
         .box.box-fourth
       #sprite.sprite(data-frameCount="8")
@@ -26,5 +27,7 @@ block body
       button#spriteStop アニメーション停止
       .scroll
         a.js-scroll(href="#secondBox") トップペ
+    .modal
+      .modal-inner
 block append script
   script(src=`${path}/assets/js/app.bundle.js?v=${Date.now()}`)

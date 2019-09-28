@@ -6,7 +6,7 @@ import { TweenMax, Bounce } from 'gsap';
 // import imagesLoaded from 'imagesloaded';
 // import 'slick-carousel';
 import Vue from 'vue';
-import * as $ from 'jquery';
+// import * as $ from 'jquery';
 
 // myModules
 import Hello from './modules/sub';
@@ -15,6 +15,8 @@ import scrollMagicSample from './modules/scrollMagicSample';
 
 import Sprite from './modules/util/SpriteAnime';
 import hashScroll from './modules/util/hashScroll';
+
+import FixBody from './modules/util/FixBody';
 
 // DOM解析後に発火
 window.addEventListener('DOMContentLoaded', () => {
@@ -72,4 +74,17 @@ window.addEventListener('load', () => {
   hashScroll('.js-scroll', 0 ,function(){
     console.log('hoge');
   });
+
+  // モーダル
+  const fixBody = new FixBody();
+  document.getElementById('modalOpen').addEventListener('click', function(){
+    document.querySelector('.modal').classList.add('js-active');
+    fixBody.fix();
+  });
+
+  document.querySelector('.modal-inner').addEventListener('click', function(){
+    document.querySelector('.modal').classList.remove('js-active');
+    fixBody.release();
+  })
+
 });

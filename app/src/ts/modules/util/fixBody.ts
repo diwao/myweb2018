@@ -1,5 +1,5 @@
 'use strict';
-// モーダル表示時に背景を止める
+// fixedのモーダル表示時に背景を止める
 class FixBody {
   private scrollTop: number;
 
@@ -29,4 +29,4 @@ class FixBody {
   }
 }
 
-export default new FixBody();
+export default FixBody;
