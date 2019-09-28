@@ -78,3 +78,14 @@ h1 {
   height: 500px;
   width: 500px;
 }
+
+.delay {
+  .js-delay-anime {
+    transition: .8s all;
+
+    &.js-active {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+  }
+}

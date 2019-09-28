@@ -12,11 +12,10 @@ import Vue from 'vue';
 import Hello from './modules/sub';
 import initThrottle from './modules/util/initThrottle';
 import scrollMagicSample from './modules/scrollMagicSample';
-
 import Sprite from './modules/util/SpriteAnime';
 import hashScroll from './modules/util/hashScroll';
-
 import FixBody from './modules/util/FixBody';
+import delayAnime from './modules/util/delayAnime';
 
 // DOM解析後に発火
 window.addEventListener('DOMContentLoaded', () => {
@@ -85,5 +84,10 @@ window.addEventListener('load', () => {
   document.querySelector('.modal-inner').addEventListener('click', function(){
     document.querySelector('.modal').classList.remove('js-active');
     fixBody.release();
+  });
+
+  // delay
+  document.getElementById('delayStart').addEventListener('click', function(){
+    delayAnime('.delay');
   });
 });

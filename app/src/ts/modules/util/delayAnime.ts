@@ -1,10 +1,11 @@
 'use strict';
 
-export default ($elm, duration = 100) => {
-  return $elm.find('.js-delay-anime').each(function(i){
+import * as $ from 'jquery';
+
+export default (el: string, duration = 100): void => {
+  $(el).find('.js-delay-anime').each(function(i){
     setTimeout(function(){
-      $(this).addClass('js-show');
+      $(this).addClass('js-active');
     }.bind(this), duration * i);
-    // console.log(i);
   });
 };
