@@ -1,7 +1,7 @@
 'use strict';
 
 // ユーザーエージェントを判定するオブジェクトを生成する
-export default class UA {
+class UA {
   private ua: String;
 
   constructor() {
@@ -36,3 +36,5 @@ export default class UA {
     return this.ua.indexOf('android') >= 0;
   }
 }
+
+export default UA;
