@@ -1,5 +1,7 @@
-export default (_interval) => {
-  const interval = _interval;
+'use strict';
+
+// intervalに指定した間隔（ms）以内に発生した処理を間引く
+export default (interval: number) => {
   let flg = false;
 
   return (func) => {
