@@ -3,7 +3,7 @@
 // Libs
 import { TweenMax, Bounce } from 'gsap';
 // import { Howl, Howler } from 'howler';
-// import imagesLoaded from 'imagesloaded';
+// import * as imagesLoaded from 'imagesloaded';
 // import 'slick-carousel';
 import Vue from 'vue';
 // import * as $ from 'jquery';
@@ -85,6 +85,5 @@ window.addEventListener('load', () => {
   document.querySelector('.modal-inner').addEventListener('click', function(){
     document.querySelector('.modal').classList.remove('js-active');
     fixBody.release();
-  })
-
+  });
 });
