@@ -1,7 +1,10 @@
 'use strict';
 
 // Libs
-// import { TimelineMax, Power0, TweenMax, Back, Elastic, Bounce, Linear, Power3 } from 'gsap/all';
+import {
+  TweenMax,
+  Bounce
+} from 'gsap';
 // import { Howl, Howler } from 'howler';
 // import imagesLoaded from 'imagesloaded';
 // import 'slick-carousel';
@@ -14,7 +17,7 @@ import scrollMagicSample from './modules/scrollMagicSample';
 
 // DOM解析後に発火
 window.addEventListener('DOMContentLoaded', () => {
-  console.log('DOMContentLoaded');
+  console.log('DOM解析完了');
 
   new Vue({
     el: '#app',
@@ -31,15 +34,23 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // ページ読み込み後に発火
 window.addEventListener('load', () => {
-  console.log('load');
+  console.log('ページ読み込み完了');
 
+  // TweenMaxのサンプルコード
+  TweenMax.to('#firstBox', 1, {
+    x: 100,
+    ease: Bounce.easeOut
+  });
+
+  // 自作モジュールの読み込みサンプル
   const hello = new Hello();
   console.log(hello.say('Jiro'));
 
+  // リサイズイベントの設定サンプル
   const resizeThrottle = initThrottle(1000);
-  window.addEventListener('resize', function(){
-    resizeThrottle(function(){
-      console.log('resize');
+  window.addEventListener('resize', function() {
+    resizeThrottle(function() {
+      console.log('resize event fired!');
     });
   });
 
