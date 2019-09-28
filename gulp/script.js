@@ -8,11 +8,11 @@ const plumber = require('gulp-plumber');
 // modules
 const webpackStream = require('webpack-stream');
 const webpack = require('webpack');
+const webpackConfig = require('../webpack.config');
 
 // task
 gulp.task('script', () => {
   const mode = process.env.NODE_ENV;
-  const webpackConfig = require('../webpack.config');
   if (mode === 'production') {
     webpackConfig.mode = mode;
   }
