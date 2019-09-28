@@ -9,7 +9,7 @@ const conf = require('./config');
 const sass = require('./gulp/sass');
 const pug = require('./gulp/pug');
 const copy = require('./gulp/copy');
-const babel = require('./gulp/babel');
+const script = require('./gulp/script');
 const imagemin = require('./gulp/image');
 const htmlhint = require('./gulp/htmlhint');
 const eslint = require('./gulp/eslint');
@@ -22,7 +22,7 @@ gulp.task('default', () => {
   browserSync.init({ server: `${dist}/` });
   gulp.watch(`${src}${conf.sass.src}`, gulp.series('sass'));
   gulp.watch(`${src}${conf.pug.src}`, gulp.series('pug'));
-  gulp.watch(`${src}${conf.babel.src}`, gulp.series('babel'));
+  gulp.watch(`${src}${conf.script.src}`, gulp.series('script'));
   gulp.watch(`${src}${conf.imagemin.src}`, gulp.series('imagemin'));
 });
 
@@ -30,7 +30,10 @@ gulp.task('default', () => {
 gulp.task('validate', gulp.series('htmlhint', 'eslint'));
 
 // build
-gulp.task('build', gulp.parallel('sass', 'pug', 'babel', 'imagemin', 'copy'));
+gulp.task('build', gulp.parallel('sass', 'pug', 'script', 'imagemin', 'copy'));
 
 // release
-gulp.task('release', gulp.series('clean', 'sass', 'pug', 'babel', 'imagemin', 'copy', 'htmlhint'));
+gulp.task(
+  'release',
+  gulp.series('clean', 'sass', 'pug', 'script', 'imagemin', 'copy', 'htmlhint')
+);

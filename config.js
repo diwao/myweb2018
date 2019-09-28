@@ -15,7 +15,7 @@ module.exports = {
     dest: '/assets/css/'
   },
   // typescript
-  babel: {
+  script: {
     src: '/ts/**/*.ts',
     dest: '/assets/js/'
   },
