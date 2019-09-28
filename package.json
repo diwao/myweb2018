@@ -36,6 +36,8 @@
     "@types/imagesloaded": "^4.1.1",
     "@types/jquery": "^3.3.31",
     "@types/slick-carousel": "^1.6.33",
+    "@typescript-eslint/eslint-plugin": "^2.3.1",
+    "@typescript-eslint/parser": "^2.3.1",
     "autoprefixer": "^8.6.5",
     "babel-loader": "^8.0.5",
     "browser-sync": "^2.26.7",
