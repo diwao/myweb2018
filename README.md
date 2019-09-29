@@ -2,9 +2,9 @@
 
 フロントエンド開発用のテンプレートです。
 
-* pug
-* scss
-* es2015
+* Pug
+* Scss
+* TypeScript
 
 が使えます。
 
@@ -35,7 +35,7 @@ $ npm run release
 $ npm run validate
 ```
 
-で`/app/dist/`内のコードをチェックできます。
+でHTMLとTypeScriptのコードをチェックできます。
 
 ## テスト
 
