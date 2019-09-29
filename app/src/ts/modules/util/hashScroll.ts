@@ -2,7 +2,7 @@ import scroll from './scroll';
 
 import * as $ from 'jquery';
 
-export default (selector: string, _margin = 0, callback) => {
+export default (selector: string, _margin = 0, callback?: () => void) => {
   // console.log($);
   $(selector).on('click', function(e) {
     e.preventDefault();
@@ -19,7 +19,7 @@ export default (selector: string, _margin = 0, callback) => {
     if (typeof callback === 'function') {
       scroll(to, callback);
     } else {
-      scroll(to, {});
+      scroll(to);
     }
   });
 };

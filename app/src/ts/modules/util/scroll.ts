@@ -2,7 +2,7 @@
 
 import * as $ from 'jquery';
 
-export default (to: number, callback) => {
+export default (to: number, callback?: () => void) => {
   // ユーザーのスクロール操作禁止
   $(document).on('touchmove mousewheel', function (e) {
     e.preventDefault();

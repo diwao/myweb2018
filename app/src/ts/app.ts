@@ -70,9 +70,11 @@ window.addEventListener('load', () => {
   });
 
   // スクロール
-  hashScroll('.js-scroll', 0 ,function(){
-    console.log('hoge');
-  });
+  // hashScroll('.js-scroll', 0 ,function(){
+  //   console.log('hoge');
+  // });
+
+  hashScroll('.js-scroll');
 
   // モーダル
   const fixBody = new FixBody();
