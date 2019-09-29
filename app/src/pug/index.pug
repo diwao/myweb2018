@@ -1,6 +1,6 @@
 extends ./_base/_layout
 block vars
-  - var path = '';
+  - var path = '.';
 block title
   title= title
 block append meta
@@ -17,9 +17,25 @@ block body
         button(@click="countUp") クリック
       //- scrollMagic Sample
       .scroll-magic-box
-        .box.box-first
+        #firstBox.box.box-first
         #secondBox.box.box-second
+        button#modalOpen modal
         #thirdBox.box.box-third
         .box.box-fourth
+      #sprite.sprite(data-frameCount="8")
+      button#spriteStart アニメーション開始
+      button#spriteStop アニメーション停止
+      .scroll
+        a.js-scroll(href="#secondBox") トップへ
+      .delay
+        button#delayStart 開始
+        ol
+          li.js-delay-anime 1
+          li.js-delay-anime 2
+          li.js-delay-anime 3
+          li.js-delay-anime 4
+          li.js-delay-anime 5
+    .modal
+      .modal-inner
 block append script
   script(src=`${path}/assets/js/app.bundle.js?v=${Date.now()}`)

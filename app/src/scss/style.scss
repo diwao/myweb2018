@@ -14,6 +14,7 @@
 // lib
 @import './libs/reset';
 @import './libs/normalize';
+// @import './libs/slick';
 // base
 @import './config/base';
 
@@ -41,6 +42,50 @@ h1 {
         opacity: 1;
         transform: translateX(0);
       }
+    }
+  }
+}
+
+.sprite {
+  background: url(../images/sprite.png) no-repeat 0 0;
+  height: 64px;
+  overflow: hidden;
+  vertical-align: bottom;
+  width: 64px;
+}
+
+.modal {
+  background: rgba(0, 0, 0, .6);
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: .5s opacity;
+  visibility: hidden;
+  width: 100%;
+
+  &.js-active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.modal-inner {
+  background: #fff;
+  height: 500px;
+  width: 500px;
+}
+
+.delay {
+  .js-delay-anime {
+    transition: .8s all;
+
+    &.js-active {
+      opacity: 0;
+      transform: translateY(10px);
     }
   }
 }

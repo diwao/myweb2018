@@ -1,7 +1,8 @@
 'use strict';
-export default (name) => {
+
+export default (name: string): string => {
   const url = location.href;
-  let params;
+  let params = [];
   let param = [];
   let str = url.replace(/[?&]/g, '<>');
   params = str.split('<>');
@@ -14,5 +15,5 @@ export default (name) => {
       return param[i][1];
     }
   }
-  return false;
+  return '';
 };

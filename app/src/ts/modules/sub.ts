@@ -4,9 +4,9 @@ class Hello {
   constructor() {
     console.log('hello! from class');
   }
-  say(name) {
+  say(name: string): string {
     return `${name}です`;
   }
 }
 
-module.exports = Hello;
+export default Hello;

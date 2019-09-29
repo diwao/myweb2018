@@ -14,9 +14,9 @@ module.exports = {
     src: '/scss/**/*.scss',
     dest: '/assets/css/'
   },
-  //babel
-  babel: {
-    src: '/js/**/*.js',
+  // typescript
+  script: {
+    src: '/ts/**/*.ts',
     dest: '/assets/js/'
   },
   //imagemin
