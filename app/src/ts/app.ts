@@ -16,6 +16,7 @@ import Sprite from './modules/util/SpriteAnime';
 import hashScroll from './modules/util/hashScroll';
 import FixBody from './modules/util/FixBody';
 import delayAnime from './modules/util/delayAnime';
+import Routine from './modules/util/Routine';
 
 // DOM解析後に発火
 window.addEventListener('DOMContentLoaded', () => {
@@ -92,4 +93,11 @@ window.addEventListener('load', () => {
   document.getElementById('delayStart').addEventListener('click', function(){
     delayAnime('.delay');
   });
+
+  // Routine
+  const routine = new Routine(0.3);
+  routine.set(function(){
+    console.log('ho');
+  });
+  routine.start();
 });

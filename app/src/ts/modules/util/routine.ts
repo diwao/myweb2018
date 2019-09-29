@@ -2,20 +2,21 @@
 
 // 繰り返しの処理を実装する
 class Routine {
-  private func: any;
+  private func: () => void;
   private timer: any;
   private duration: number;
+  private minutes: number;
 
-  constructor() {
+  constructor(minutes = 5) {
     this.func = null;
     this.timer = null;
     this.duration = 0;
+    this.minutes = minutes;
   }
 
   // 繰り返しの処理を登録する
-  init(func): void {
-    const minutes = 5;  // 5分
-    this.duration = minutes * 1000 * 60;
+  set(func: () => void): void {
+    this.duration = this.minutes * 1000 * 60;
     const repeat = () => {
       if (typeof func === 'function') {
         func();

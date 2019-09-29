@@ -4,7 +4,7 @@
 export default (interval: number) => {
   let flg = false;
 
-  return (func) => {
+  return (func: () => void): boolean => {
     if (!(typeof func === 'function')) {
       return false;
     }
