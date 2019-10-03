@@ -7,6 +7,4 @@ const conf = require('../config');
 
 const path = `${conf.dest}/**/*`;
 
-gulp.task('clean', del.bind(
-  null, [ path ], { force: true }
-));
+gulp.task('clean', del.bind(null, [path], { force: true }));

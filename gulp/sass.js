@@ -19,26 +19,26 @@ const mode = process.env.NODE_ENV;
 
 // options
 const autoprefixerOption = {
-  grid : true
+  grid: true
 };
 
-let postcssOption = [
-  flexBugsFixes,
-  autoprefixer(autoprefixerOption)
-];
+let postcssOption = [flexBugsFixes, autoprefixer(autoprefixerOption)];
 
 if (mode === 'production') {
   postcssOption.push(cssWring);
 }
 
 // task
-gulp.task('sass', function(){
+gulp.task('sass', function() {
   const src = conf.src + conf.sass.src;
   const dest = conf.dest + conf.sass.dest;
-  return gulp.src(src)
-    .pipe(plumber({
-      errorHandler: notify.onError('Error: <%= error.message %>')
-    }))
+  return gulp
+    .src(src)
+    .pipe(
+      plumber({
+        errorHandler: notify.onError('Error: <%= error.message %>')
+      })
+    )
     .pipe(sass())
     .pipe(postcss(postcssOption))
     .pipe(gulp.dest(dest))
