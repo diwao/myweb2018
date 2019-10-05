@@ -24,6 +24,9 @@ module.exports = {
       vue$: 'vue/dist/vue.esm.js'
     },
     extensions: ['.ts', '.webpack.js', '.web.js', '.js']
-  },
-  devtool: 'eval-source-map'
+  }
 };
+
+if (process.env.NODE_ENV !== 'production') {
+  module.exports.devtool = 'inline-source-map';
+}
