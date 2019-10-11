@@ -1,8 +1,14 @@
 {
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
   "editor.tabSize": 2,
   "editor.renderWhitespace": "all",
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
+  "git.ignoreLimitWarning": true,
   "css.lint.duplicateProperties": "warning",
   "css.lint.important": "warning",
   "css.lint.idSelector": "warning",
