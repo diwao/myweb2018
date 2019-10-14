@@ -1,6 +1,6 @@
 import {
   // TimelineMax,
-  Power0,
+  Power0
   // TweenMax,
   // Back,
   // Elastic,
@@ -8,7 +8,7 @@ import {
   // Linear,
   // Power3
 } from 'gsap';
-import ScrollMagic from 'scrollmagic';
+import * as ScrollMagic from 'scrollmagic';
 import 'imports-loader?define=>false!scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap';
 
 export default () => {
