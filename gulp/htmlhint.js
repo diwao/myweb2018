@@ -1,29 +1,24 @@
 'use strict';
 
 // common modules
-const gulp = require('gulp');
+const { src } = require('gulp');
 const htmlhint = require('gulp-htmlhint');
 const notify = require('gulp-notify');
 const plumber = require('gulp-plumber');
 
 const config = require('../config');
 
-gulp.task('htmlhint', () => {
-  const src = `${config.dest}${config.htmlhint.src}`;
-  return gulp
-    .src(src)
+const validHtmlhint = done => {
+  const htmlhintSrc = `${config.dest}${config.htmlhint.src}`;
+  src(htmlhintSrc)
     .pipe(
       plumber({
         errorHandler: notify.onError('Error: <%= error.message %>')
       })
     )
     .pipe(htmlhint('.htmlhintrc'))
-    .pipe(htmlhint.reporter())
-    .pipe(
-      notify({
-        title: 'run htmlhint',
-        message: new Date(),
-        sound: 'Glass'
-      })
-    );
-});
+    .pipe(htmlhint.reporter());
+  done();
+};
+
+module.exports = validHtmlhint;
