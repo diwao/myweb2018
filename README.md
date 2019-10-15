@@ -1,10 +1,10 @@
-# myweb2018
+# d-front
 
 フロントエンド開発用のテンプレートです。
 
 * pug
 * scss
-* es2015
+* TypeScript
 
 が使えます。
 
@@ -29,22 +29,22 @@ $ npm run release
 
 `src`直下の`static`ディレクトリに配置したファイルはそのままdistに出力されます。
 
-### コードチェック
+### バリデーション
 
 ```
 $ npm run validate
 ```
 
-で`/app/dist/`内のコードをチェックできます。
+でTypeScriptとdist内のHTMLをチェックできます。
 
 ## テスト
 
-mochaが使えます。テストファイルはの置き場所はroot直下の`test`ディレクトリです。
+jestが使えます。テストファイルはの置き場所はroot直下の`test`ディレクトリです。
 
 
 ## 推奨環境
 
 |    | version  |
 | ---- | ---- |
-|  node.js  | v10.15.0  |
-|  npm  | v6.4.1  |
+|  node.js  | v10.15.1  |
+|  npm  | v6.11.2  |
