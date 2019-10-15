@@ -25,7 +25,12 @@
     "camelcase": [1, {"properties": "always"}],
     "no-unused-vars": 1
   },
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "sourceType": "module"
-  }
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "@typescript-eslint"
+  ]
 }

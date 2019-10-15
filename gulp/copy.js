@@ -1,13 +1,14 @@
 'use strict';
 
 // モジュール読み込み
-const gulp = require('gulp');
+const { src, dest } = require('gulp');
 const conf = require('../config');
 
-gulp.task('copy', (done) => {
-  const dest = conf.dest;
-  gulp.src('./app/src/static/**')
-    .pipe(gulp.dest(dest + '/')
-  );
+const copy = done => {
+  const copySrc = './app/src/static/**';
+  const copyDest = conf.dest + '/';
+  src(copySrc).pipe(dest(copyDest + '/'));
   done();
-});
+};
+
+module.exports = copy;
