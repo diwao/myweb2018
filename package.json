@@ -1,5 +1,5 @@
 {
-  "name": "myweb2018",
+  "name": "d-front",
   "version": "2.0.0",
   "directories": {
     "test": "test"
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/diwao/myweb2018.git"
+    "url": "git+https://github.com/diwao/d-front.git"
   },
   "browserslist": [
     "> 0.5% in JP"
@@ -24,9 +24,9 @@
   "author": "daisuke iwao",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/diwao/myweb2018/issues"
+    "url": "https://github.com/diwao/d-front/issues"
   },
-  "homepage": "https://github.com/diwao/myweb2018#readme",
+  "homepage": "https://github.com/diwao/d-front#readme",
   "devDependencies": {
     "@babel/core": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
