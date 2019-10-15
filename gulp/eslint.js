@@ -1,7 +1,7 @@
 'use strict';
 
 // common modules
-const gulp = require('gulp');
+const { src } = require('gulp');
 const eslint = require('gulp-eslint');
 const notify = require('gulp-notify');
 const plumber = require('gulp-plumber');
@@ -9,10 +9,9 @@ const plumber = require('gulp-plumber');
 const config = require('../config');
 
 // task
-gulp.task('eslint', function() {
-  const src = `${config.src}${config.script.src}`;
-  return gulp
-    .src(src)
+const validEslint = done => {
+  const eslintSrc = `${config.src}${config.script.src}`;
+  src(eslintSrc)
     .pipe(
       plumber({
         errorHandler: notify.onError('Error: <%= error.message %>')
@@ -28,10 +27,7 @@ gulp.task('eslint', function() {
         }
       })
     );
-  //   .pipe(notify({
-  //     title: 'eslintを実行しました！',
-  //     message: new Date(),
-  //     sound: 'Glass'
-  //   })
-  // );
-});
+  done();
+};
+
+module.exports = validEslint;

@@ -79,24 +79,24 @@ window.addEventListener('load', () => {
 
   // モーダル
   const fixBody = new FixBody();
-  document.getElementById('modalOpen').addEventListener('click', function(){
+  document.getElementById('modalOpen').addEventListener('click', function() {
     document.querySelector('.modal').classList.add('js-active');
     fixBody.fix();
   });
 
-  document.querySelector('.modal-inner').addEventListener('click', function(){
+  document.querySelector('.modal-inner').addEventListener('click', function() {
     document.querySelector('.modal').classList.remove('js-active');
     fixBody.release();
   });
 
   // delay
-  document.getElementById('delayStart').addEventListener('click', function(){
+  document.getElementById('delayStart').addEventListener('click', function() {
     delayAnime('.delay');
   });
 
   // Routine
   const routine = new Routine(0.3);
-  routine.set(function(){
+  routine.set(function() {
     console.log('ho');
   });
   routine.start();

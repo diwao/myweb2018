@@ -1,7 +1,7 @@
 'use strict';
 
 // common modules
-const gulp = require('gulp');
+const { src, dest } = require('gulp');
 const notify = require('gulp-notify');
 const plumber = require('gulp-plumber');
 const browserSync = require('browser-sync');
@@ -23,17 +23,19 @@ const imageminOption = [
 ];
 
 // task
-gulp.task('imagemin', () => {
-  const src = conf.src + conf.imagemin.src;
-  const dest = conf.dest + conf.imagemin.dest;
-  return gulp
-    .src(src)
+const minifyImages = done => {
+  const imgSrc = conf.src + conf.imagemin.src;
+  const imgDest = conf.dest + conf.imagemin.dest;
+  src(imgSrc)
     .pipe(
       plumber({
         errorHandler: notify.onError('Error: <%= error.message %>')
       })
     )
     .pipe(imagemin(imageminOption))
-    .pipe(gulp.dest(dest))
+    .pipe(dest(imgDest))
     .pipe(browserSync.stream());
-});
+  done();
+};
+
+module.exports = minifyImages;
