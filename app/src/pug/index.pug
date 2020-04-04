@@ -6,6 +6,8 @@ block title
 block append meta
 block append link
   link(rel="stylesheet", href=`${path}/assets/css/style.css`)
+block append script
+  script(defer, src=`${path}/assets/js/app.bundle.js?v=${Date.now()}`)
 block body
   #wrapper.wrapper
     header.header
@@ -37,5 +39,3 @@ block body
           li.js-delay-anime 5
     .modal
       .modal-inner
-block append script
-  script(src=`${path}/assets/js/app.bundle.js?v=${Date.now()}`)
