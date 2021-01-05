@@ -70,7 +70,7 @@
   },
   "private": true,
   "dependencies": {
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "gsap": "^2.1.2",
     "howler": "^2.1.1",
     "imagesloaded": "^4.1.4",
