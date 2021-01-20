@@ -71,7 +71,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.1",
-    "gsap": "^2.1.2",
+    "gsap": "^3.6.0",
     "howler": "^2.1.1",
     "imagesloaded": "^4.1.4",
     "jquery": "^3.4.0",
